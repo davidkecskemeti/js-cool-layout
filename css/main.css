@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Poppins';
+}
+
+img {
+  width: 100%;
+  visibility: hidden;
+  position: absolute;
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+          clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  -webkit-transition: -webkit-clip-path .3s;
+  transition: -webkit-clip-path .3s;
+  transition: clip-path .3s;
+  transition: clip-path .3s, -webkit-clip-path .3s;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5em 0 5em 5em;
+  position: relative;
+}
+
+section {
+  width: 800px;
+  position: absolute;
+  right: 10em;
+}
+
+nav {
+  margin-right: 4em;
+  position: fixed;
+  width: 800px;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  width: 10em;
+}
+
+ul li {
+  text-transform: uppercase;
+  padding: .8em 0 .8em .8em;
+  cursor: pointer;
+  border-radius: 76% 24% 41% 59% / 56% 80% 20% 44%;
+  position: relative;
+  -webkit-transition: border-radius 1s;
+  transition: border-radius 1s;
+}
+
+ul li:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  border-bottom: 2px solid black;
+  top: 1.45em;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+ul li:hover {
+  border: 1px solid gray;
+  border-radius: 30% 70% 73% 27% / 30% 30% 70% 70%;
+}
+
+ul li:hover:before {
+  width: 80%;
+}
+
+.intro {
+  visibility: visible;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+/*# sourceMappingURL=main.css.map */
